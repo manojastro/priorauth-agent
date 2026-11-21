@@ -1,0 +1,250 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-036-pat"
+      },
+      "resource": {
+        "birthDate": "1972-08-02",
+        "gender": "male",
+        "id": "pa-case-036-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100036"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Sample",
+            "given": [
+              "Sam"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-036-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-036-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan PPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "PPO"
+          }
+        ],
+        "id": "pa-case-036-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM85369789"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2023-08-12"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM85369789"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-036-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "M54.16",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "M54.16"
+        },
+        "id": "pa-case-036-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-09-27",
+        "recordedDate": "2026-10-11",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-036-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-036-proc-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-COURSE",
+              "display": "Physical therapy course",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy course"
+        },
+        "id": "pa-case-036-proc-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedPeriod": {
+          "end": "2026-10-16",
+          "start": "2026-08-15"
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-036-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-036-note-3"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4K"
+            }
+          }
+        ],
+        "date": "2026-10-31T10:00:00Z",
+        "id": "pa-case-036-note-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-036-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-036-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-23",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-MRI-LSPINE",
+              "display": "MRI lumbar spine without contrast",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "MRI lumbar spine without contrast"
+        },
+        "id": "pa-case-036-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-036-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-036",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-11-06",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-036-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

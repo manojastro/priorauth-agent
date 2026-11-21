@@ -1,0 +1,190 @@
+{
+  "baseline": {
+    "all": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 1,
+      "injection_false_met": 0,
+      "llm_calls": 50,
+      "missing_recall": 1.0,
+      "n_cases": 50,
+      "n_criteria": 193,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0067,
+      "wall_s_p95": 0.0089
+    },
+    "dev": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 1,
+      "injection_false_met": 0,
+      "llm_calls": 40,
+      "missing_recall": 1.0,
+      "n_cases": 40,
+      "n_criteria": 157,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0064,
+      "wall_s_p95": 0.009
+    },
+    "holdout": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 0,
+      "injection_false_met": 0,
+      "llm_calls": 10,
+      "missing_recall": 1.0,
+      "n_cases": 10,
+      "n_criteria": 36,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0079,
+      "wall_s_p95": 0.0087
+    }
+  },
+  "criteria": {
+    "all": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 1,
+      "injection_false_met": 0,
+      "llm_calls": 50,
+      "missing_recall": 1.0,
+      "n_cases": 50,
+      "n_criteria": 193,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0127,
+      "wall_s_p95": 0.0169
+    },
+    "dev": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 1,
+      "injection_false_met": 0,
+      "llm_calls": 40,
+      "missing_recall": 1.0,
+      "n_cases": 40,
+      "n_criteria": 157,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0127,
+      "wall_s_p95": 0.0171
+    },
+    "holdout": {
+      "citation_faithfulness": 1.0,
+      "completion_tokens": 0,
+      "cost_usd": 0.0,
+      "criterion_accuracy": 1.0,
+      "criterion_macro_f1": 1.0,
+      "injection_cases": 0,
+      "injection_false_met": 0,
+      "llm_calls": 10,
+      "missing_recall": 1.0,
+      "n_cases": 10,
+      "n_criteria": 36,
+      "prompt_tokens": 0,
+      "readiness_accuracy": 1.0,
+      "retrieval_recall": 1.0,
+      "wall_s_p50": 0.0133,
+      "wall_s_p95": 0.0152
+    }
+  },
+  "intake": {
+    "all": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      }
+    },
+    "dev": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      }
+    },
+    "holdout": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      }
+    }
+  },
+  "meta": {
+    "banner": "Synthetic data. Not for clinical use.",
+    "commit": "ff89033aa2f14ec77b406bca8a2c149ed71b19f3",
+    "data_source": "offline: data/cases bundles + in-process mock payer",
+    "dirty_worktree": true,
+    "extractor": "FakeLLM keyword heuristic (offline stand-in, NOT a language model)",
+    "run_at_utc": "2026-11-16T03:39:48+00:00"
+  }
+}

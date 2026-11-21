@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Case queue{% endblock %}
+{% block body %}
+<h1>Case queue</h1>
+<div class="card">
+  <h2>Runs</h2>
+  {% if threads %}
+  <div class="table-wrap"><table>
+    <tr><th>Run</th><th>Case</th><th>Stage</th><th>Started by</th><th>At (UTC)</th></tr>
+    {% for t in threads %}
+    <tr><td><a href="/threads/{{ t.thread_id }}">{{ t.thread_id }}</a></td><td>{{ t.case_id }}</td>
+        <td>{{ t.stage }}</td><td>{{ t.started_by }}</td><td>{{ t.at }}</td></tr>
+    {% endfor %}
+  </table></div>
+  {% else %}<p class="muted">No runs yet. Start one below.</p>{% endif %}
+</div>
+<div class="card">
+  <h2>Synthetic cases</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Case</th><th>Service</th><th>Service date</th><th></th></tr>
+    {% for c in cases %}
+    <tr><td>{{ c.case_id }}</td><td>{{ c.service }}</td><td>{{ c.date }}</td>
+      <td><form method="post" action="/cases/start">
+        <input type="hidden" name="service_request_id" value="{{ c.service_request_id }}">
+        <input type="hidden" name="case_id" value="{{ c.case_id }}">
+        <button type="submit">Run agent</button></form></td></tr>
+    {% endfor %}
+  </table></div>
+</div>
+{% endblock %}

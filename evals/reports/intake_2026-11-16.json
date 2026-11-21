@@ -1,0 +1,1184 @@
+{
+  "failures": [],
+  "meta": {
+    "banner": "Synthetic data. Not for clinical use.",
+    "commit": "ff89033aa2f14ec77b406bca8a2c149ed71b19f3",
+    "data_source": "offline: data/cases bundles + in-process mock payer",
+    "dirty_worktree": true,
+    "run_at_utc": "2026-11-16T03:39:46+00:00"
+  },
+  "metrics": {
+    "all": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 50,
+        "n": 50
+      }
+    },
+    "dev": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 40,
+        "n": 40
+      }
+    },
+    "holdout": {
+      "eligibility_reasons": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "eligible": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "pa_required": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      },
+      "policy_id": {
+        "accuracy": 1.0,
+        "correct": 10,
+        "n": 10
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "pa-case-001",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-002",
+      "category": "tricky",
+      "eligibility_reasons": [
+        [
+          "coverage_not_active_on_service_date"
+        ],
+        [
+          "coverage_not_active_on_service_date"
+        ]
+      ],
+      "eligible": [
+        false,
+        false
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": "terminated_coverage"
+    },
+    {
+      "case_id": "pa-case-003",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-004",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-005",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-006",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-007",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-008",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-TKA",
+        "ACME-POL-TKA"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-009",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-010",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-011",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-012",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-013",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-014",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-015",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-016",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-TKA",
+        "ACME-POL-TKA"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-017",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-018",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-019",
+      "category": "tricky",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "holdout",
+      "tricky_kind": "stale_evidence"
+    },
+    {
+      "case_id": "pa-case-020",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-021",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-022",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-023",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-024",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-TKA",
+        "ACME-POL-TKA"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-025",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-026",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-027",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-028",
+      "category": "tricky",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": "prompt_injection"
+    },
+    {
+      "case_id": "pa-case-029",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-030",
+      "category": "tricky",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "dev",
+      "tricky_kind": "contradictory_notes"
+    },
+    {
+      "case_id": "pa-case-031",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-032",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-TKA",
+        "ACME-POL-TKA"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-033",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-034",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-035",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-036",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-037",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "holdout",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-038",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-039",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-040",
+      "category": "tricky",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        false,
+        false
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": "no_pa_required"
+    },
+    {
+      "case_id": "pa-case-041",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-042",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-043",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-KMRI",
+        "ACME-POL-KMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-044",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-LSMRI",
+        "ACME-POL-LSMRI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-045",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PSG",
+        "ACME-POL-PSG"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-046",
+      "category": "missing",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-PTX",
+        "ACME-POL-PTX"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-047",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-RABIO",
+        "ACME-POL-RABIO"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-048",
+      "category": "not_met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-TKA",
+        "ACME-POL-TKA"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-049",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-BARI",
+        "ACME-POL-BARI"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    },
+    {
+      "case_id": "pa-case-050",
+      "category": "met",
+      "eligibility_reasons": [
+        [],
+        []
+      ],
+      "eligible": [
+        true,
+        true
+      ],
+      "pa_required": [
+        true,
+        true
+      ],
+      "policy_id": [
+        "ACME-POL-CPAP",
+        "ACME-POL-CPAP"
+      ],
+      "split": "dev",
+      "tricky_kind": null
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+{% block body %}
+<h1>Log in (demo stub)</h1>
+<p class="muted">No passwords: this is a stub. Production would use the organisation's SSO.</p>
+<form method="post" action="/login">
+  <label for="username">Demo user</label>
+  <select id="username" name="username">
+    {% for name, role in users.items() %}<option value="{{ name }}">{{ name }} — {{ role }}</option>{% endfor %}
+  </select>
+  <button class="primary" type="submit">Log in</button>
+</form>
+{% endblock %}

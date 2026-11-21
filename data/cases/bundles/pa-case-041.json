@@ -1,0 +1,243 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-041-pat"
+      },
+      "resource": {
+        "birthDate": "1950-04-21",
+        "gender": "female",
+        "id": "pa-case-041-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100041"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Mockley",
+            "given": [
+              "Avery"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-041-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-041-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan HMO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "HMO"
+          }
+        ],
+        "id": "pa-case-041-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM86110133"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2023-10-16"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM86110133"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-041-proc-1"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "WT-PROGRAM",
+              "display": "Supervised weight management program",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Supervised weight management program"
+        },
+        "id": "pa-case-041-proc-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedPeriod": {
+          "end": "2026-10-28",
+          "start": "2026-04-16"
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-041-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-041-proc-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PSYCH-EVAL",
+              "display": "Pre-surgical psychological evaluation",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Pre-surgical psychological evaluation"
+        },
+        "id": "pa-case-041-proc-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-20",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-041-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-041-note-3"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KUGF0aWVudCBjb21wbGV0ZWQgbnV0cml0aW9uIGNvdW5zZWxpbmcgd2l0aCBhIHJlZ2lzdGVyZWQgZGlldGl0aWFuICg0IHNlc3Npb25zKS4KUGxhbiBkaXNjdXNzZWQgd2l0aCB0aGUgcGF0aWVudCwgd2hvIGFncmVlcy4K"
+            }
+          }
+        ],
+        "date": "2026-10-31T10:00:00Z",
+        "id": "pa-case-041-note-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-041-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-041-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-28",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-BARIATRIC",
+              "display": "Bariatric surgery",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "Bariatric surgery"
+        },
+        "id": "pa-case-041-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-041-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-041",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-11-11",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-041-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

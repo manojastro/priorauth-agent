@@ -1,0 +1,49 @@
+# Local stack. Synthetic data only. Not for clinical use.
+# Image tags pinned 2026-11-14 (see docs/DECISIONS.md).
+name: priorauth
+
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg16-bookworm
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-priorauth}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-priorauth_local}
+      POSTGRES_DB: ${POSTGRES_DB:-priorauth}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  hapi:
+    image: hapiproject/hapi:v8.12.0-2
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      # Spring relaxed binding of hapi-fhir-jpaserver-starter application.yaml keys.
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hapi
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-priorauth}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-priorauth_local}
+      SPRING_DATASOURCE_DRIVERCLASSNAME: org.postgresql.Driver
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: ca.uhn.fhir.jpa.model.dialect.HapiFhirPostgresDialect
+      HAPI_FHIR_FHIR_VERSION: R4
+    ports:
+      - "${HAPI_PORT:-8080}:8080"
+    # No in-container healthcheck: the image may not ship a shell or curl.
+    # Readiness is checked from the host by `uv run python -m scripts.check_services`.
+
+  jaeger:
+    image: jaegertracing/jaeger:2.23.0
+    ports:
+      - "16686:16686" # UI
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+
+volumes:
+  pgdata:

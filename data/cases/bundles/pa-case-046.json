@@ -1,0 +1,669 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-046-pat"
+      },
+      "resource": {
+        "birthDate": "1971-07-15",
+        "gender": "female",
+        "id": "pa-case-046-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100046"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Example",
+            "given": [
+              "Sam"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-046-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-046-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan EPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "EPO"
+          }
+        ],
+        "id": "pa-case-046-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM99874742"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2023-08-26"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM99874742"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-1"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-19",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-14",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-3"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-09",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-4"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-04",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-5"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-5",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-29",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-6"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-6",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-24",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-7"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-7",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-19",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-8"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-8",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-14",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-9"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-9",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-09",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-10"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-10",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-09-04",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-11"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-11",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-08-30",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-12"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-12",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-08-25",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-13"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-13",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-08-20",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-14"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-14",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-08-15",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-046-visit-15"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-VISIT",
+              "display": "Physical therapy visit",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy visit"
+        },
+        "id": "pa-case-046-visit-15",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-08-10",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-046-note-16"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KU2luY2UgdGhlIHN0YXJ0IG9mIHRoZXJhcHksIGtuZWUgZmxleGlvbiBpbXByb3ZlZCBmcm9tIDkwIHRvIDExNSBkZWdyZWVzIGFuZCB3YWxraW5nIHRvbGVyYW5jZSBkb3VibGVkOyBjb250aW51ZWQgdGhlcmFweSBpcyBleHBlY3RlZCB0byBpbXByb3ZlIGZ1bmN0aW9uLgpQbGFuIGRpc2N1c3NlZCB3aXRoIHRoZSBwYXRpZW50LCB3aG8gYWdyZWVzLgo="
+            }
+          }
+        ],
+        "date": "2026-11-07T10:00:00Z",
+        "id": "pa-case-046-note-16",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-046-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-11-02",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-PT-EXT",
+              "display": "Additional outpatient physical therapy visits (beyond 12)",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "Additional outpatient physical therapy visits (beyond 12)"
+        },
+        "id": "pa-case-046-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-046-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-046",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-11-16",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-046-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

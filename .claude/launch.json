@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "workbench",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "uvicorn", "src.workbench.app:app", "--port", "8000"],
+      "port": 8000
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Case {{ tid }}{% endblock %}
+{% block body %}
+<h1>Case {{ tid }}</h1>
+<p>Stage: <strong>{{ v.stage }}</strong></p>
+<div class="grid">
+  <div class="card">
+    <h2>Patient (synthetic)</h2>
+    {% if patient %}
+      <p>{{ patient.name[0].given[0] }} {{ patient.name[0].family }} · {{ patient.gender }} · born {{ patient.birthDate }}</p>
+    {% else %}<p class="muted">Not loaded.</p>{% endif %}
+  </div>
+  <div class="card">
+    <h2>Intake</h2>
+    {% set i = v.intake %}
+    <p>Service {{ i.service_code }} on {{ i.service_date }} · plan {{ i.coverage.plan_type }} · member {{ i.coverage.member_id }}</p>
+    <p>Eligible: <strong>{{ "yes" if i.eligible else "no" }}</strong>
+       {% if i.eligibility_reasons %}({{ i.eligibility_reasons|join(", ") }}){% endif %}
+       · PA required: <strong>{{ i.pa_required }}</strong> · policy {{ i.policy_id }}</p>
+  </div>
+</div>
+
+{% if v.assessment %}
+<div class="card">
+  <h2>Criteria checklist</h2>
+  <p>Agent readiness recommendation: <strong>{{ v.assessment.readiness }}</strong>
+     <span class="muted">(the reviewer decides)</span></p>
+  {% if v.assessment.injection_flags %}
+    <p class="not_met">Instruction-like text found in notes and ignored:
+      {% for f in v.assessment.injection_flags %}<br>“{{ f.line }}” ({{ f.note_id }}){% endfor %}</p>
+  {% endif %}
+  <form method="post" action="/threads/{{ tid }}/decision">
+  <div class="table-wrap"><table>
+    <tr><th>Criterion</th><th>Assessment</th><th>Reason</th><th>Evidence</th>{% if is_reviewer and pending %}<th>Override</th>{% endif %}</tr>
+    {% for c in v.assessment.criteria %}
+    <tr>
+      <td>{{ c.criterion_id }}</td>
+      <td class="{{ c.label }}">{{ c.label }}</td>
+      <td>{{ c.reason }}</td>
+      <td>
+        {% for e in c.evidence %}
+          <a href="#" hx-get="/evidence/{{ e.resource_type }}/{{ e.resource_id }}{% if e.span %}?start={{ e.span[0] }}&end={{ e.span[1] }}{% endif %}"
+             hx-target="#evidence-panel">{{ e.resource_type }}/{{ e.resource_id }}</a><br>
+        {% else %}<span class="muted">none</span>{% endfor %}
+        {% if c.dropped %}<span class="muted">{{ c.dropped|length }} citation(s) failed verification</span>{% endif %}
+      </td>
+      {% if is_reviewer and pending %}
+      <td>
+        <select name="override_label_{{ c.criterion_id }}" aria-label="Override {{ c.criterion_id }}">
+          <option value="">—</option><option>met</option><option>not_met</option><option>missing</option>
+        </select>
+        <input name="override_reason_{{ c.criterion_id }}" placeholder="reason (required)" aria-label="Override reason {{ c.criterion_id }}">
+      </td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table></div>
+  {% if pending %}
+    <p><label>Comment <input name="comment" size="40"></label></p>
+    {% if v.packet_errors %}<p class="not_met">Packet failed validation: {{ v.packet_errors|join("; ") }}</p>{% endif %}
+    <button class="primary" name="action" value="approve" {% if not is_reviewer %}disabled{% endif %}>Approve and submit</button>
+    <button name="action" value="edit" {% if not is_reviewer %}disabled{% endif %}>Apply overrides</button>
+    <button name="action" value="reject" {% if not is_reviewer %}disabled{% endif %}>Reject (request more info)</button>
+    {% if not is_reviewer %}<p class="muted">Only a pa_reviewer can approve, edit or reject.</p>{% endif %}
+  {% endif %}
+  </form>
+</div>
+<div class="card"><h2>Evidence</h2><div id="evidence-panel" class="muted">Click an evidence link.</div></div>
+{% endif %}
+
+{% if v.submission %}
+<div class="card" id="status">{% with sub = v.submission %}{% include "_status.html" %}{% endwith %}</div>
+{% endif %}
+
+{% if packet_json %}
+<div class="card"><h2>Packet preview (FHIR Bundle)</h2>
+  <div>{{ v.packet.entry[0].resource.text.div|safe }}</div>
+  <details><summary>JSON</summary><pre>{{ packet_json }}</pre></details>
+</div>
+{% endif %}
+
+<div class="card"><h2>Audit trail</h2>
+  <div class="table-wrap"><table>
+    <tr><th>At (UTC)</th><th>Actor</th><th>Role</th><th>Action</th><th>Details</th></tr>
+    {% for a in audit %}
+    <tr><td>{{ a.at_utc }}</td><td>{{ a.actor }}</td><td>{{ a.role }}</td><td>{{ a.action }}</td>
+      <td>{{ a.details }}{% if a.before %}<br>before: {{ a.before }}<br>after: {{ a.after }}{% endif %}</td></tr>
+    {% endfor %}
+  </table></div>
+</div>
+{% endblock %}

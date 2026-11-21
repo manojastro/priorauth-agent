@@ -1,0 +1,286 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-018-pat"
+      },
+      "resource": {
+        "birthDate": "1960-02-12",
+        "gender": "female",
+        "id": "pa-case-018-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100018"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Synthetic",
+            "given": [
+              "Riley"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-018-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-018-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan EPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "EPO"
+          }
+        ],
+        "id": "pa-case-018-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM21640086"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2025-03-18"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM21640086"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-018-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "G47.33",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "G47.33"
+        },
+        "id": "pa-case-018-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-08-01",
+        "recordedDate": "2026-09-19",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-018-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/pa-case-018-obs-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "AHI",
+              "display": "Apnea-hypopnea index",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Apnea-hypopnea index"
+        },
+        "effectiveDateTime": "2026-10-03",
+        "id": "pa-case-018-obs-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/pa-case-018-pat"
+        },
+        "valueQuantity": {
+          "code": "/h",
+          "system": "http://unitsofmeasure.org",
+          "unit": "/h",
+          "value": 7.0
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-018-proc-3"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PSG-STUDY",
+              "display": "Attended polysomnography",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Attended polysomnography"
+        },
+        "id": "pa-case-018-proc-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-09",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-018-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-018-note-4"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KRmFjZS10by1mYWNlIGV2YWx1YXRpb24gdG9kYXkgcmV2aWV3ZWQgc25vcmluZywgZGF5dGltZSBzbGVlcGluZXNzIGFuZCBzbGVlcCBzdHVkeSByZXN1bHRzIHdpdGggdGhlIHBhdGllbnQuClBsYW4gZGlzY3Vzc2VkIHdpdGggdGhlIHBhdGllbnQsIHdobyBhZ3JlZXMuCg=="
+            }
+          }
+        ],
+        "date": "2026-10-13T10:00:00Z",
+        "id": "pa-case-018-note-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-018-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-018-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-05",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-CPAP",
+              "display": "CPAP device",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "CPAP device"
+        },
+        "id": "pa-case-018-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-018-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-018",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-10-19",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-018-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

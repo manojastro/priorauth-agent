@@ -1,0 +1,283 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-040-pat"
+      },
+      "resource": {
+        "birthDate": "1990-04-20",
+        "gender": "female",
+        "id": "pa-case-040-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100040"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Fakeson",
+            "given": [
+              "Casey"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-040-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-040-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan PPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "PPO"
+          }
+        ],
+        "id": "pa-case-040-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM63037615"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2025-10-04"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM63037615"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-040-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "S83.511A",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "S83.511A"
+        },
+        "id": "pa-case-040-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-08-25",
+        "recordedDate": "2026-10-20",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-040-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-040-proc-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-COURSE",
+              "display": "Physical therapy course",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy course"
+        },
+        "id": "pa-case-040-proc-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedPeriod": {
+          "end": "2026-10-16",
+          "start": "2026-09-06"
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-040-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-040-proc-3"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "XR-KNEE",
+              "display": "Plain radiograph of the knee",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Plain radiograph of the knee"
+        },
+        "id": "pa-case-040-proc-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedDateTime": "2026-10-22",
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-040-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-040-note-4"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KT24gZXhhbWluYXRpb24gdGhlIHBhdGllbnQgcmVwb3J0cyBsb2NraW5nIGFuZCBjYXRjaGluZyBvZiB0aGUga25lZSwgd2l0aCBhIHBvc2l0aXZlIE1jTXVycmF5IHRlc3QuClBsYW4gZGlzY3Vzc2VkIHdpdGggdGhlIHBhdGllbnQsIHdobyBhZ3JlZXMuCg=="
+            }
+          }
+        ],
+        "date": "2026-11-07T10:00:00Z",
+        "id": "pa-case-040-note-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-040-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-040-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-27",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-MRI-KNEE",
+              "display": "MRI knee without contrast",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "MRI knee without contrast"
+        },
+        "id": "pa-case-040-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-040-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-040",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-11-10",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-040-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

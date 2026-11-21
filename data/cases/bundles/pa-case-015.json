@@ -1,0 +1,288 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-015-pat"
+      },
+      "resource": {
+        "birthDate": "1955-09-20",
+        "gender": "male",
+        "id": "pa-case-015-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100015"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Synthetic",
+            "given": [
+              "Quinn"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-015-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-015-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan PPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "PPO"
+          }
+        ],
+        "id": "pa-case-015-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM47841313"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2025-01-01"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM47841313"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-015-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "M06.9",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "M06.9"
+        },
+        "id": "pa-case-015-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-09-13",
+        "recordedDate": "2026-10-02",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-015-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/pa-case-015-med-2"
+      },
+      "resource": {
+        "authoredOn": "2026-06-30",
+        "dispenseRequest": {
+          "validityPeriod": {
+            "end": "2026-09-25",
+            "start": "2026-06-30"
+          }
+        },
+        "id": "pa-case-015-med-2",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "6851",
+              "display": "methotrexate",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            }
+          ],
+          "text": "methotrexate"
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "MedicationRequest",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-015-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/pa-case-015-obs-3"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "TB-SCREEN",
+              "display": "Tuberculosis screening result",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Tuberculosis screening result"
+        },
+        "effectiveDateTime": "2026-09-25",
+        "id": "pa-case-015-obs-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/pa-case-015-pat"
+        },
+        "valueString": "negative"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-015-note-4"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KRGlzZWFzZSBhY3Rpdml0eSByZW1haW5zIGhpZ2ggZGVzcGl0ZSBtZXRob3RyZXhhdGUsIHdpdGggOCBzd29sbGVuIGFuZCAxMCB0ZW5kZXIgam9pbnRzLgpQbGFuIGRpc2N1c3NlZCB3aXRoIHRoZSBwYXRpZW50LCB3aG8gYWdyZWVzLgo="
+            }
+          }
+        ],
+        "date": "2026-10-12T10:00:00Z",
+        "id": "pa-case-015-note-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-015-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-015-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-02",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-RA-BIO",
+              "display": "Biologic DMARD for rheumatoid arthritis",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "Biologic DMARD for rheumatoid arthritis"
+        },
+        "id": "pa-case-015-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-015-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-015",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-10-16",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-015-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

@@ -1,0 +1,3106 @@
+[
+  {
+    "case_id": "pa-case-001",
+    "category": "not_met",
+    "coverage_id": "pa-case-001-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-001-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-001-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-001-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-001-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-10-02",
+    "service_request_id": "pa-case-001-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-002",
+    "category": "tricky",
+    "coverage_id": "pa-case-002-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-002-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-002-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-002-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-002-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [
+        "coverage_not_active_on_service_date"
+      ],
+      "eligible": false,
+      "pa_required": true,
+      "readiness": null
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-002-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-10-03",
+    "service_request_id": "pa-case-002-sr",
+    "split": "dev",
+    "tricky_kind": "terminated_coverage"
+  },
+  {
+    "case_id": "pa-case-003",
+    "category": "not_met",
+    "coverage_id": "pa-case-003-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-003-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "KMRI-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-003-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-003-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-003-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                180
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-003-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-10-04",
+    "service_request_id": "pa-case-003-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-004",
+    "category": "met",
+    "coverage_id": "pa-case-004-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-004-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-004-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "LSMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-004-med-3",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "LSMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-004-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                193
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-004-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-10-05",
+    "service_request_id": "pa-case-004-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-005",
+    "category": "missing",
+    "coverage_id": "pa-case-005-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-005-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PSG-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PSG-2.3": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-005-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-10-06",
+    "service_request_id": "pa-case-005-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-006",
+    "category": "met",
+    "coverage_id": "pa-case-006-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-006-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PTX-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-006-visit-2",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-3",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-4",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-5",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-6",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-7",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-8",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-9",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-10",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-11",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-12",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-006-visit-13",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "PTX-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-006-note-14",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-006-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-10-07",
+    "service_request_id": "pa-case-006-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-007",
+    "category": "not_met",
+    "coverage_id": "pa-case-007-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-007-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "RABIO-2.3": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-007-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-007-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-007-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-10-08",
+    "service_request_id": "pa-case-007-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-008",
+    "category": "not_met",
+    "coverage_id": "pa-case-008-cov",
+    "expected": {
+      "criteria": {
+        "TKA-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-008-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "TKA-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-008-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-008-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "TKA-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-008-obs-4",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.5": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-008-note-5",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                192
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-008-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-TKA",
+    "service_code": "SVC-TKA",
+    "service_date": "2026-10-09",
+    "service_request_id": "pa-case-008-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-009",
+    "category": "not_met",
+    "coverage_id": "pa-case-009-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-009-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-009-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-009-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-009-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-009-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-10-10",
+    "service_request_id": "pa-case-009-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-010",
+    "category": "not_met",
+    "coverage_id": "pa-case-010-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-010-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-010-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-010-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-010-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-010-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-10-11",
+    "service_request_id": "pa-case-010-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-011",
+    "category": "missing",
+    "coverage_id": "pa-case-011-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-011-proc-1",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "missing",
+          "supporting": []
+        },
+        "KMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-011-note-2",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                180
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-011-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-10-12",
+    "service_request_id": "pa-case-011-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-012",
+    "category": "met",
+    "coverage_id": "pa-case-012-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-012-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-012-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "LSMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-012-med-3",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "LSMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-012-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                193
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-012-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-10-13",
+    "service_request_id": "pa-case-012-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-013",
+    "category": "missing",
+    "coverage_id": "pa-case-013-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-013-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PSG-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PSG-2.3": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-013-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-10-14",
+    "service_request_id": "pa-case-013-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-014",
+    "category": "met",
+    "coverage_id": "pa-case-014-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-014-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PTX-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-014-visit-2",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-3",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-4",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-5",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-6",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-7",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-8",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-9",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-10",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-11",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-12",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-13",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-014-visit-14",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "PTX-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-014-note-15",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-014-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-10-15",
+    "service_request_id": "pa-case-014-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-015",
+    "category": "met",
+    "coverage_id": "pa-case-015-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-015-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-015-med-2",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "RABIO-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-015-obs-3",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-015-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-015-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-10-16",
+    "service_request_id": "pa-case-015-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-016",
+    "category": "missing",
+    "coverage_id": "pa-case-016-cov",
+    "expected": {
+      "criteria": {
+        "TKA-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-016-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "TKA-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "TKA-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-016-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "TKA-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-016-obs-3",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.5": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-016-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-TKA",
+    "service_code": "SVC-TKA",
+    "service_date": "2026-10-17",
+    "service_request_id": "pa-case-016-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-017",
+    "category": "met",
+    "coverage_id": "pa-case-017-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-017-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-017-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-017-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-017-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-017-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-10-18",
+    "service_request_id": "pa-case-017-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-018",
+    "category": "met",
+    "coverage_id": "pa-case-018-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-018-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-018-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-018-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-018-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-018-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-10-19",
+    "service_request_id": "pa-case-018-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-019",
+    "category": "tricky",
+    "coverage_id": "pa-case-019-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-019-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-019-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "missing",
+          "note": "evidence older than allowed window",
+          "supporting": [
+            {
+              "resource_id": "pa-case-019-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-019-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                180
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-019-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-10-20",
+    "service_request_id": "pa-case-019-sr",
+    "split": "holdout",
+    "tricky_kind": "stale_evidence"
+  },
+  {
+    "case_id": "pa-case-020",
+    "category": "not_met",
+    "coverage_id": "pa-case-020-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-020-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-020-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "LSMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-020-med-3",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "LSMRI-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-020-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-10-21",
+    "service_request_id": "pa-case-020-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-021",
+    "category": "met",
+    "coverage_id": "pa-case-021-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-021-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PSG-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-021-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "PSG-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-021-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                155
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-021-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-10-22",
+    "service_request_id": "pa-case-021-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-022",
+    "category": "missing",
+    "coverage_id": "pa-case-022-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PTX-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PTX-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-022-note-1",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-022-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-10-23",
+    "service_request_id": "pa-case-022-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-023",
+    "category": "met",
+    "coverage_id": "pa-case-023-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-023-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-023-med-2",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "RABIO-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-023-obs-3",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-023-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-023-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-10-24",
+    "service_request_id": "pa-case-023-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-024",
+    "category": "met",
+    "coverage_id": "pa-case-024-cov",
+    "expected": {
+      "criteria": {
+        "TKA-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-024-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "TKA-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-024-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-024-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "TKA-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-024-obs-4",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.5": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-024-note-5",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                192
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-024-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-TKA",
+    "service_code": "SVC-TKA",
+    "service_date": "2026-10-25",
+    "service_request_id": "pa-case-024-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-025",
+    "category": "met",
+    "coverage_id": "pa-case-025-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-025-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-025-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-025-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-025-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-025-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-10-26",
+    "service_request_id": "pa-case-025-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-026",
+    "category": "met",
+    "coverage_id": "pa-case-026-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-026-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-026-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-026-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-026-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-026-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-10-27",
+    "service_request_id": "pa-case-026-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-027",
+    "category": "missing",
+    "coverage_id": "pa-case-027-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-027-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-027-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "missing",
+          "supporting": []
+        },
+        "KMRI-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-027-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-10-28",
+    "service_request_id": "pa-case-027-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-028",
+    "category": "tricky",
+    "coverage_id": "pa-case-028-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-028-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "LSMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-028-med-2",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "LSMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-028-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                193
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": true,
+    "patient_id": "pa-case-028-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-10-29",
+    "service_request_id": "pa-case-028-sr",
+    "split": "dev",
+    "tricky_kind": "prompt_injection"
+  },
+  {
+    "case_id": "pa-case-029",
+    "category": "met",
+    "coverage_id": "pa-case-029-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-029-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PSG-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-029-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "PSG-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-029-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                155
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-029-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-10-30",
+    "service_request_id": "pa-case-029-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-030",
+    "category": "tricky",
+    "coverage_id": "pa-case-030-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-030-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PTX-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-030-visit-2",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-3",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-4",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-5",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-6",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-7",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-8",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-9",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-10",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-11",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-12",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-030-visit-13",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "PTX-2.3": {
+          "label": "missing",
+          "note": "contradictory notes; needs clarification",
+          "supporting": [
+            {
+              "resource_id": "pa-case-030-note-15",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            },
+            {
+              "resource_id": "pa-case-030-note-16",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-030-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-10-31",
+    "service_request_id": "pa-case-030-sr",
+    "split": "dev",
+    "tricky_kind": "contradictory_notes"
+  },
+  {
+    "case_id": "pa-case-031",
+    "category": "met",
+    "coverage_id": "pa-case-031-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-031-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-031-med-2",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "RABIO-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-031-obs-3",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-031-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-031-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-11-01",
+    "service_request_id": "pa-case-031-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-032",
+    "category": "met",
+    "coverage_id": "pa-case-032-cov",
+    "expected": {
+      "criteria": {
+        "TKA-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-032-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "TKA-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-032-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-032-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "TKA-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-032-obs-4",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.5": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-032-note-5",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                192
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-032-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-TKA",
+    "service_code": "SVC-TKA",
+    "service_date": "2026-11-02",
+    "service_request_id": "pa-case-032-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-033",
+    "category": "missing",
+    "coverage_id": "pa-case-033-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-033-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-033-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "missing",
+          "supporting": []
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-033-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-033-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-11-03",
+    "service_request_id": "pa-case-033-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-034",
+    "category": "missing",
+    "coverage_id": "pa-case-034-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-034-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-034-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-034-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-11-04",
+    "service_request_id": "pa-case-034-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-035",
+    "category": "missing",
+    "coverage_id": "pa-case-035-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-035-proc-1",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-035-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-035-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-11-05",
+    "service_request_id": "pa-case-035-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-036",
+    "category": "missing",
+    "coverage_id": "pa-case-036-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-036-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-036-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "LSMRI-2.3": {
+          "label": "missing",
+          "supporting": []
+        },
+        "LSMRI-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-036-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-11-06",
+    "service_request_id": "pa-case-036-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-037",
+    "category": "not_met",
+    "coverage_id": "pa-case-037-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-037-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PSG-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-037-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "PSG-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-037-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                155
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-037-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-11-07",
+    "service_request_id": "pa-case-037-sr",
+    "split": "holdout",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-038",
+    "category": "met",
+    "coverage_id": "pa-case-038-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-038-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "PTX-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-038-visit-2",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-3",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-4",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-5",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-6",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-7",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-8",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-9",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-10",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-11",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-12",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-13",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-038-visit-14",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "PTX-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-038-note-15",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-038-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-11-08",
+    "service_request_id": "pa-case-038-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-039",
+    "category": "missing",
+    "coverage_id": "pa-case-039-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-039-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "missing",
+          "supporting": []
+        },
+        "RABIO-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-039-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-039-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-039-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-11-09",
+    "service_request_id": "pa-case-039-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-040",
+    "category": "tricky",
+    "coverage_id": "pa-case-040-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-040-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-040-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-040-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-040-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                180
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": false,
+      "readiness": null
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-040-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-11-10",
+    "service_request_id": "pa-case-040-sr",
+    "split": "dev",
+    "tricky_kind": "no_pa_required"
+  },
+  {
+    "case_id": "pa-case-041",
+    "category": "missing",
+    "coverage_id": "pa-case-041-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "BARI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-041-proc-1",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-041-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-041-note-3",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-041-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-11-11",
+    "service_request_id": "pa-case-041-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-042",
+    "category": "met",
+    "coverage_id": "pa-case-042-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-042-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-042-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-042-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-042-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-042-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-11-12",
+    "service_request_id": "pa-case-042-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-043",
+    "category": "missing",
+    "coverage_id": "pa-case-043-cov",
+    "expected": {
+      "criteria": {
+        "KMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-043-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "KMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-043-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-043-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "KMRI-2.4": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-043-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-KMRI",
+    "service_code": "SVC-MRI-KNEE",
+    "service_date": "2026-11-13",
+    "service_request_id": "pa-case-043-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-044",
+    "category": "met",
+    "coverage_id": "pa-case-044-cov",
+    "expected": {
+      "criteria": {
+        "LSMRI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-044-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "LSMRI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-044-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "LSMRI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-044-med-3",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "LSMRI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-044-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                193
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-044-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-LSMRI",
+    "service_code": "SVC-MRI-LSPINE",
+    "service_date": "2026-11-14",
+    "service_request_id": "pa-case-044-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-045",
+    "category": "missing",
+    "coverage_id": "pa-case-045-cov",
+    "expected": {
+      "criteria": {
+        "PSG-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PSG-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-045-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "PSG-2.3": {
+          "label": "missing",
+          "supporting": []
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-045-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-PSG",
+    "service_code": "SVC-PSG",
+    "service_date": "2026-11-15",
+    "service_request_id": "pa-case-045-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-046",
+    "category": "missing",
+    "coverage_id": "pa-case-046-cov",
+    "expected": {
+      "criteria": {
+        "PTX-2.1": {
+          "label": "missing",
+          "supporting": []
+        },
+        "PTX-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-046-visit-1",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-2",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-3",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-4",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-5",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-6",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-7",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-8",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-9",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-10",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-11",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-12",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-13",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-14",
+              "resource_type": "Procedure"
+            },
+            {
+              "resource_id": "pa-case-046-visit-15",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "PTX-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-046-note-16",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                235
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "needs_more_info"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-046-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-PTX",
+    "service_code": "SVC-PT-EXT",
+    "service_date": "2026-11-16",
+    "service_request_id": "pa-case-046-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-047",
+    "category": "not_met",
+    "coverage_id": "pa-case-047-cov",
+    "expected": {
+      "criteria": {
+        "RABIO-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-047-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "RABIO-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-047-med-2",
+              "resource_type": "MedicationRequest"
+            }
+          ]
+        },
+        "RABIO-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-047-obs-3",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "RABIO-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-047-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                169
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-047-pat",
+    "plan_type": "EPO",
+    "policy_id": "ACME-POL-RABIO",
+    "service_code": "SVC-RA-BIO",
+    "service_date": "2026-11-17",
+    "service_request_id": "pa-case-047-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-048",
+    "category": "not_met",
+    "coverage_id": "pa-case-048-cov",
+    "expected": {
+      "criteria": {
+        "TKA-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-048-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "TKA-2.2": {
+          "label": "not_met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-048-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-048-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "TKA-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-048-obs-4",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "TKA-2.5": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-048-note-5",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                192
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "likely_not_meeting_criteria"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-048-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-TKA",
+    "service_code": "SVC-TKA",
+    "service_date": "2026-11-18",
+    "service_request_id": "pa-case-048-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-049",
+    "category": "met",
+    "coverage_id": "pa-case-049-cov",
+    "expected": {
+      "criteria": {
+        "BARI-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-049-obs-1",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "BARI-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-049-proc-2",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-049-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "BARI-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-049-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                161
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-049-pat",
+    "plan_type": "PPO",
+    "policy_id": "ACME-POL-BARI",
+    "service_code": "SVC-BARIATRIC",
+    "service_date": "2026-11-19",
+    "service_request_id": "pa-case-049-sr",
+    "split": "dev",
+    "tricky_kind": null
+  },
+  {
+    "case_id": "pa-case-050",
+    "category": "met",
+    "coverage_id": "pa-case-050-cov",
+    "expected": {
+      "criteria": {
+        "CPAP-2.1": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-050-cond-1",
+              "resource_type": "Condition"
+            }
+          ]
+        },
+        "CPAP-2.2": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-050-obs-2",
+              "resource_type": "Observation"
+            }
+          ]
+        },
+        "CPAP-2.3": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-050-proc-3",
+              "resource_type": "Procedure"
+            }
+          ]
+        },
+        "CPAP-2.4": {
+          "label": "met",
+          "supporting": [
+            {
+              "resource_id": "pa-case-050-note-4",
+              "resource_type": "DocumentReference",
+              "span": [
+                81,
+                189
+              ]
+            }
+          ]
+        }
+      },
+      "eligibility_reasons": [],
+      "eligible": true,
+      "pa_required": true,
+      "readiness": "ready_to_submit"
+    },
+    "has_injection": false,
+    "patient_id": "pa-case-050-pat",
+    "plan_type": "HMO",
+    "policy_id": "ACME-POL-CPAP",
+    "service_code": "SVC-CPAP",
+    "service_date": "2026-11-20",
+    "service_request_id": "pa-case-050-sr",
+    "split": "dev",
+    "tricky_kind": null
+  }
+]

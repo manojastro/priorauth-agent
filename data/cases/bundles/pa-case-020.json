@@ -1,0 +1,290 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-020-pat"
+      },
+      "resource": {
+        "birthDate": "1958-02-07",
+        "gender": "female",
+        "id": "pa-case-020-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100020"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Sample",
+            "given": [
+              "Jamie"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-020-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-020-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan PPO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "PPO"
+          }
+        ],
+        "id": "pa-case-020-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM88840364"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2023-05-09"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM88840364"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-020-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "M54.50",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "M54.50"
+        },
+        "id": "pa-case-020-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-10-08",
+        "recordedDate": "2026-10-13",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-020-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-020-proc-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-COURSE",
+              "display": "Physical therapy course",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy course"
+        },
+        "id": "pa-case-020-proc-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedPeriod": {
+          "end": "2026-09-21",
+          "start": "2026-08-31"
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-020-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/pa-case-020-med-3"
+      },
+      "resource": {
+        "authoredOn": "2026-08-16",
+        "dispenseRequest": {
+          "validityPeriod": {
+            "end": "2026-09-27",
+            "start": "2026-08-16"
+          }
+        },
+        "id": "pa-case-020-med-3",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "41493",
+              "display": "meloxicam",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+            }
+          ],
+          "text": "meloxicam"
+        },
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "MedicationRequest",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-020-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-020-note-4"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4K"
+            }
+          }
+        ],
+        "date": "2026-10-08T10:00:00Z",
+        "id": "pa-case-020-note-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-020-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-020-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-10-07",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-MRI-LSPINE",
+              "display": "MRI lumbar spine without contrast",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "MRI lumbar spine without contrast"
+        },
+        "id": "pa-case-020-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-020-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-020",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-10-21",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-020-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

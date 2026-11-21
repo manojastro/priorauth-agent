@@ -1,0 +1,323 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Patient/pa-case-048-pat"
+      },
+      "resource": {
+        "birthDate": "1982-06-10",
+        "gender": "female",
+        "id": "pa-case-048-pat",
+        "identifier": [
+          {
+            "system": "http://demo-clinic.example/fhir/sid/mrn",
+            "value": "MRN100048"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "name": [
+          {
+            "family": "Sample",
+            "given": [
+              "Taylor"
+            ]
+          }
+        ],
+        "resourceType": "Patient"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Coverage/pa-case-048-cov"
+      },
+      "resource": {
+        "beneficiary": {
+          "reference": "Patient/pa-case-048-pat"
+        },
+        "class": [
+          {
+            "name": "Acme Health Plan HMO",
+            "type": {
+              "coding": [
+                {
+                  "code": "plan",
+                  "system": "http://terminology.hl7.org/CodeSystem/coverage-class"
+                }
+              ]
+            },
+            "value": "HMO"
+          }
+        ],
+        "id": "pa-case-048-cov",
+        "identifier": [
+          {
+            "system": "http://acme-health.example/fhir/sid/member-id",
+            "value": "ACM72284734"
+          }
+        ],
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "Organization/acme-health-plan"
+          }
+        ],
+        "period": {
+          "start": "2024-10-07"
+        },
+        "resourceType": "Coverage",
+        "status": "active",
+        "subscriberId": "ACM72284734"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Condition/pa-case-048-cond-1"
+      },
+      "resource": {
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "M17.11",
+              "system": "http://hl7.org/fhir/sid/icd-10-cm"
+            }
+          ],
+          "text": "M17.11"
+        },
+        "id": "pa-case-048-cond-1",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "onsetDateTime": "2026-10-04",
+        "recordedDate": "2026-10-29",
+        "resourceType": "Condition",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/pa-case-048-obs-2"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "KL-GRADE",
+              "display": "Kellgren-Lawrence radiographic grade",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Kellgren-Lawrence radiographic grade"
+        },
+        "effectiveDateTime": "2026-11-11",
+        "id": "pa-case-048-obs-2",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        },
+        "valueInteger": 0
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Procedure/pa-case-048-proc-3"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "PT-COURSE",
+              "display": "Physical therapy course",
+              "system": "http://acme-health.example/fhir/CodeSystem/clinical"
+            }
+          ],
+          "text": "Physical therapy course"
+        },
+        "id": "pa-case-048-proc-3",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "performedPeriod": {
+          "end": "2026-11-06",
+          "start": "2026-08-08"
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Observation/pa-case-048-obs-4"
+      },
+      "resource": {
+        "code": {
+          "coding": [
+            {
+              "code": "39156-5",
+              "display": "Body mass index",
+              "system": "http://loinc.org"
+            }
+          ],
+          "text": "Body mass index"
+        },
+        "effectiveDateTime": "2026-11-11",
+        "id": "pa-case-048-obs-4",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "status": "final",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        },
+        "valueQuantity": {
+          "code": "kg/m2",
+          "system": "http://unitsofmeasure.org",
+          "unit": "kg/m2",
+          "value": 36.1
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "DocumentReference/pa-case-048-note-5"
+      },
+      "resource": {
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "U3ludGhldGljIGRlbW8gbm90ZS4gTm90IGZvciBjbGluaWNhbCB1c2UuClBhdGllbnQgc2VlbiBpbiBjbGluaWMgZm9yIGZvbGxvdy11cC4KUGF0aWVudCByZXBvcnRzIGtuZWUgcGFpbiBsaW1pdHMgd2Fsa2luZyB0byBvbmUgYmxvY2sgYW5kIHByZXZlbnRzIGNsaW1iaW5nIHN0YWlycywgYWZmZWN0aW5nIGRhaWx5IGFjdGl2aXRpZXMuClZpdGFsIHNpZ25zIHJldmlld2VkLgo="
+            }
+          }
+        ],
+        "date": "2026-11-11T10:00:00Z",
+        "id": "pa-case-048-note-5",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "status": "current",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "11506-3",
+              "display": "Progress note",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "ServiceRequest/pa-case-048-sr"
+      },
+      "resource": {
+        "authoredOn": "2026-11-04",
+        "code": {
+          "coding": [
+            {
+              "code": "SVC-TKA",
+              "display": "Total knee arthroplasty",
+              "system": "http://acme-health.example/fhir/CodeSystem/service"
+            }
+          ],
+          "text": "Total knee arthroplasty"
+        },
+        "id": "pa-case-048-sr",
+        "insurance": [
+          {
+            "reference": "Coverage/pa-case-048-cov"
+          }
+        ],
+        "intent": "order",
+        "meta": {
+          "tag": [
+            {
+              "code": "pa-case-048",
+              "system": "http://acme-health.example/fhir/CodeSystem/case-id"
+            }
+          ]
+        },
+        "occurrenceDateTime": "2026-11-18",
+        "requester": {
+          "reference": "Practitioner/demo-practitioner"
+        },
+        "resourceType": "ServiceRequest",
+        "status": "active",
+        "subject": {
+          "reference": "Patient/pa-case-048-pat"
+        }
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

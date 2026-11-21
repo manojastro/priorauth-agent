@@ -1,0 +1,6 @@
+<p><strong>{{ rtype }}/{{ rid }}</strong></p>
+{% if rtype == "DocumentReference" %}
+<pre>{{ before }}<mark>{{ hit }}</mark>{{ after }}</pre>
+{% else %}
+<pre>{{ json }}</pre>
+{% endif %}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}PA workbench{% endblock %}</title>
+  <script src="https://unpkg.com/htmx.org@2.0.4" crossorigin="anonymous"></script>
+  <style>
+    :root { --fg:#1d1d1f; --muted:#5f6368; --line:#d9dce1; --bg:#fff; --soft:#f5f6f8;
+            --ok:#1e7d3a; --bad:#b3261e; --warn:#8a5a00; --accent:#1f5fbf; }
+    * { box-sizing: border-box; }
+    body { margin:0; font:15px/1.5 system-ui, sans-serif; color:var(--fg); background:var(--bg); }
+    .banner { background:#fff4ce; border-bottom:1px solid #e6d58a; padding:8px 16px; font-weight:600; }
+    header, main { max-width:1100px; margin:0 auto; padding:12px 16px; }
+    header { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+    a { color:var(--accent); }
+    table { border-collapse:collapse; width:100%; }
+    .table-wrap { overflow-x:auto; }
+    th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+    .met { color:var(--ok); font-weight:600; }
+    .not_met { color:var(--bad); font-weight:600; }
+    .missing { color:var(--warn); font-weight:600; }
+    .card { border:1px solid var(--line); border-radius:8px; padding:12px 16px; margin:12px 0; }
+    pre { background:var(--soft); padding:8px; overflow:auto; max-height:360px; font-size:12px; white-space:pre-wrap; }
+    mark { background:#ffe27a; }
+    .muted { color:var(--muted); }
+    button { padding:6px 12px; border-radius:6px; border:1px solid var(--line); background:var(--soft); cursor:pointer; }
+    button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    @media (max-width: 760px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="banner" role="note">{{ BANNER }}</div>
+  <header>
+    <a href="/"><strong>Prior-auth workbench</strong></a>
+    <span>{% if user %}{{ user.name }} ({{ user.role }}) · <a href="/logout">Log out</a>{% endif %}</span>
+  </header>
+  <main>{% block body %}{% endblock %}</main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "entry": [
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Organization/acme-health-plan"
+      },
+      "resource": {
+        "active": true,
+        "id": "acme-health-plan",
+        "name": "Acme Health Plan (synthetic payer)",
+        "resourceType": "Organization"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Organization/demo-clinic"
+      },
+      "resource": {
+        "active": true,
+        "id": "demo-clinic",
+        "name": "Demo Clinic (synthetic provider)",
+        "resourceType": "Organization"
+      }
+    },
+    {
+      "request": {
+        "method": "PUT",
+        "url": "Practitioner/demo-practitioner"
+      },
+      "resource": {
+        "active": true,
+        "id": "demo-practitioner",
+        "name": [
+          {
+            "family": "Clinician",
+            "given": [
+              "Demo"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ],
+        "resourceType": "Practitioner"
+      }
+    }
+  ],
+  "resourceType": "Bundle",
+  "type": "transaction"
+}

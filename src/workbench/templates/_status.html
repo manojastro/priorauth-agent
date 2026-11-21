@@ -1,0 +1,5 @@
+<h2>Payer response</h2>
+<p>Submission {{ sub.submission_id }} · status <strong>{{ sub.status }}</strong>{% if not sub.final %} (not final){% endif %}
+  {% if sub.pre_auth_ref %}· pre-auth ref {{ sub.pre_auth_ref }}{% endif %}</p>
+{% for r in sub.reasons %}<p>{{ r.code }}: {{ r.text }} {% if r.criteria %}({{ r.criteria|join(", ") }}){% endif %}</p>{% endfor %}
+{% if not sub.final %}<button hx-post="/threads/{{ tid }}/poll" hx-target="#status">Check status</button>{% endif %}
